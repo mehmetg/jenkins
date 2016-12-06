@@ -69,3 +69,26 @@ end
 jenkins_secret_text_credentials 'dollarbills_secret' do
   secret '$uper$ecret'
 end
+
+# Test basic password credentials creation
+jenkins_saucelabs_password_credentials 'schisamosl' do
+  description 'passwords are for suckers'
+  password 'superseekret'
+end
+
+# Test specifying a UUID-based ID
+jenkins_saucelabs_password_credentials 'schisamo2sl' do
+  id '63e11302-d446-4ba0-8aa4-f5821f74d36a'
+  password 'superseekret'
+end
+
+# Test specifying a string-based ID
+jenkins_saucelabs_password_credentials 'schisamo3sl' do
+  id 'schisamo3sl'
+  password 'superseekret'
+end
+
+# Test creating a password with a dollar sign in it
+jenkins_saucelabs_password_credentials 'dollarbillssl' do
+  password '$uper$ecret'
+end

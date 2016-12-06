@@ -57,3 +57,26 @@ describe jenkins_secret_text_credentials('dollarbills_secret') do
   it { should be_a_jenkins_credentials }
   it { should have_secret('$uper$ecret') }
 end
+
+describe jenkins_user_credentials('schisamosl') do
+  it { should be_a_jenkins_credentials }
+  it { should have_description('passwords are for suckers') }
+  it { should have_password('superseekret') }
+end
+
+describe jenkins_user_credentials('schisamo2sl') do
+  it { should be_a_jenkins_credentials }
+  it { should have_id('63e11302-d446-4ba0-8aa4-f5821f74d36a') }
+  it { should have_password('superseekret') }
+end
+
+describe jenkins_user_credentials('schisamo3sl') do
+  it { should be_a_jenkins_credentials }
+  it { should have_id('schisamo3sl') }
+  it { should have_password('superseekret') }
+end
+
+describe jenkins_user_credentials('dollarbillssl') do
+  it { should be_a_jenkins_credentials }
+  it { should have_password('$uper$ecret') }
+end

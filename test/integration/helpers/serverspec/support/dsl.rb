@@ -14,6 +14,14 @@ module RSpec
         Serverspec::Type::JenkinsPlugin.new(name)
       end
 
+      def jenkins_password_credentials(description)
+        Serverspec::Type::JenkinsPasswordCredentials.new(description)
+      end
+
+      def jenkins_saucelabs_password_credentials(description)
+        Serverspec::Type::JenkinsSauceLabsPasswordCredentials.new(description)
+      end
+
       def jenkins_secret_text_credentials(description)
         Serverspec::Type::JenkinsSecretTextCredentials.new(description)
       end

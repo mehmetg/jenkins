@@ -34,3 +34,25 @@ end
 jenkins_secret_text_credentials 'dollarbills_secret' do
   action :delete
 end
+
+# test deletion with base resource
+jenkins_saucelabs_password_credentials 'schisamosl' do
+  action :delete
+end
+
+# test deletion with `jenkins_password_credentials` child resource
+jenkins_saucelabs_password_credentials 'schisamo2sl' do
+  action :delete
+end
+
+jenkins_saucelabs_password_credentials 'schisamo3sl' do
+  action :delete
+end
+
+jenkins_saucelabs_password_credentials 'dollarbillssl' do
+  action :delete
+end
+
+jenkins_password_credentials 'dollarbills' do
+  action :delete
+end
